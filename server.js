@@ -10,9 +10,12 @@ const mongoose = require('mongoose');
 const flash = require('connect-flash');
 const passport = require('passport');
 const mysql = require('mysql');
+const socketIO = require('socket.io');
+
+
 const container = require('./container');
 
-container.resolve(function(users, _, admin, home){
+container.resolve(function(users, _, admin, home, group){
    
     mongoose.Promise = global.Promise;
     mongoose.connect('mongodb://localhost/dailnickelchat', {useMongoClient: true});
@@ -23,18 +26,22 @@ container.resolve(function(users, _, admin, home){
         
         const app = express();
         const server = http.createServer(app);
+        const io = socketIO(server);
         
-        server.listen(3000, function(){
+        server.listen(process.env.PORT || 3000, function(){
             console.log('Listening on port 3000');
         });
         
         ConfigureExpress(app);
+        
+        require('./socket/groupchat')(io);
         
         // Set up Router 
         const router = require('express-promise-router')();
         users.SetRouting(router);
         admin.SetRouting(router);
         home.SetRouting(router);
+        group.SetRouting(router);
         
         app.use(router);
     }
