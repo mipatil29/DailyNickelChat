@@ -1,10 +1,9 @@
 'use strict';
 
-
-
 module.exports = function(){
     
     return {
+        
         SignUpValidation: (req, res, next) => {
             req.checkBody('username', 'Username is Required').notEmpty();
             req.checkBody('username', 'Username Must Not Be Less Than 5').isLength({min: 5});
@@ -59,6 +58,7 @@ module.exports = function(){
 
 
 /*
+
 module.exports = function(){
     return {
         SignUpValidation: (req, res, next) => {
