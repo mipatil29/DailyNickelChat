@@ -128,6 +128,12 @@ h3 {
     padding-bottom: 10px;
 }
 
+.chat-name{
+    font-size: 17px;
+    font-weight: 600;
+    color: #4aa1f3;
+}
+
 .message_write {
     background: white none repeat scroll 0 0;
     float: left;
@@ -199,17 +205,11 @@ member_list li:hover {
 .card .user {
     border-radius: 50%;
     display: block;
-    height: 120px;
+    height: 200px;
     margin: -55px auto 0;
     overflow: hidden;
-    width: 120px;
+    width: 200px;
 }
-
-    .card .user img {
-        background: none repeat scroll 0 0 #FFFFFF;
-        border: 4px solid #FFFFFF;
-        width: 100%;
-    }
 
 .card .content {
     background-color: rgba(0, 0, 0, 0);
@@ -298,16 +298,133 @@ member_list li:hover {
     border-right: 1px solid rgba(128, 128, 128, 0.32);
 }
 
+.modal {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
 
+.modal-title{
+    color: #4aa1f3;
+}
 
+#nameLink, .btn_close{
+    background-color: #4aa1f3 !important;
+    color: white !important;
+}
 
+.modal-body{
+    text-align: center;
+}
 
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 100%;
+}
 
+.modal-footer {
+    padding-top: 15px;
+}
 
+#val{
+    cursor: pointer;
+    text-decoration: none;
+    color: #4aa1f3;
+}
 
+.nav-label-icon {
+    top: -9px;
+    position: relative;
+    background: red;
+    padding: 2px;
+}
 
+.nav-glyphicon {
+    padding-right: 4px;
+    position: relative;
+    top: 2px;
+}
 
+.dropdown-tag-head {
+    color: white;
+    padding-top: 7px;
+    margin-top: 0px;
+    font-size: 17px;
+}
 
+.dmenu {
+    padding-top: 0px !important;
+}
 
+.dropdown-tag {
+    background: #03A9F4;
+    color: white;
+    padding: 4px;
+    margin-bottom: 15px;
+}
+
+.navbar-login {
+    width: 305px;
+    padding-bottom: 30px;
+    padding-top: 0px;
+    height: 300px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.drop-name {
+    margin-bottom: 0px;
+}
+
+.dropdown-divider {
+    margin-top: 5px !important;
+    margin-bottom: 14px !important;
+}
+
+.drop-accept {
+    background: #4aa1f3 !important;
+    border: #3bb5ec;
+    color: white !important;
+    text-shadow: none;
+}
+
+#reload{
+    padding: 0px 15px 0px 15px;
+}
+
+.cover-img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.cover-img img{
+    min-height: 100%;
+    min-width: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.dropdown-img{
+    width: 40px;
+    height: 40px;
+}
 
 

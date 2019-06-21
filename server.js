@@ -11,6 +11,7 @@ const flash = require('connect-flash');
 const passport = require('passport');
 const mysql = require('mysql');
 const socketIO = require('socket.io');
+const {Users} = require('./helpers/UsersClass');
 
 
 const container = require('./container');
@@ -34,7 +35,9 @@ container.resolve(function(users, _, admin, home, group){
         
         ConfigureExpress(app);
         
-        require('./socket/groupchat')(io);
+        require('./socket/groupchat')(io, Users);
+        require('./socket/friend')(io);
+        
         
         // Set up Router 
         const router = require('express-promise-router')();
