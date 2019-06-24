@@ -22,12 +22,11 @@ module.exports = function(io){
             
         });
         
-        /*
         
         socket.on('refresh', function(){
             io.emit('new refresh', {});
         });
         
-        */
+    
     });
 }
