@@ -8,6 +8,9 @@ module.exports = function(Users, async){
             // // For Friend Request
             router.post('/group/:name', this.groupPostPage);
             
+            
+             //Logout Functionality
+            router.get('/logout', this.logout);
         },
 
         
@@ -15,8 +18,6 @@ module.exports = function(Users, async){
             const name = req.params.name;
             
             //res.render('groupchat/group', {title: 'Daily Nickel Chat - Group', user:req.user, groupName:name }); -- Commenting this line to implement the friend Functionality
-            
-            
             
             // For Friend Request
             async.parallel([
@@ -196,8 +197,15 @@ module.exports = function(Users, async){
                 
                 
             ]);
-        }
+        },
         // For Friend Request
+        
+        logout: function(req, res){
+            req.logout();
+            req.session.destroy((err) => {
+               res.redirect('/');
+            });
+        }
     }
 }
 
