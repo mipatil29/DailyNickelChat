@@ -66,6 +66,19 @@ $(document).ready(function(){
             from: sender
         }, function() {
             $('#msg').val('');
+        });
+        
+        
+        $.ajax({
+            url: '/group/'+room,
+            type: 'POST',
+            data: {
+                message: msg,
+                groupName: room
+            },
+            success: function(){
+                $('#msg').val('');
+            }
         })
         
     });

@@ -1,6 +1,6 @@
 
 
-module.exports = function(async, Groups, _, Users, Message){
+module.exports = function(async, Groups, _, Users, Message, FriendResult){
 
     return {
         
@@ -115,6 +115,10 @@ module.exports = function(async, Groups, _, Users, Message){
                     });
                 },
                 
+                
+                /* 
+                // Commenting and adding in to FriendResult.js
+                
                 function(callback){
                     if(req.body.chatId){
                         Message.update({
@@ -128,6 +132,7 @@ module.exports = function(async, Groups, _, Users, Message){
                         })
                     }
                 }
+                */
                 
                 
             ], (err, results) => {
@@ -135,7 +140,7 @@ module.exports = function(async, Groups, _, Users, Message){
                 res.redirect('/home');
             });
             
-            //FriendResult.PostRequest(req, res, '/home');
+            FriendResult.PostRequest(req, res, '/home');
         },
         
         logout: function(req, res){
