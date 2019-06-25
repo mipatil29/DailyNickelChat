@@ -11,7 +11,7 @@ $(document).ready(function(){
         }
         
         socket.emit('joinRequest', params, function(){
-            console.log('Joined');
+            //console.log('Joined');
         });
         
     });

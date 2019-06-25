@@ -1,4 +1,3 @@
-
 //var path=require('path');
 //var fs = require('fs');
 
@@ -41,7 +40,6 @@ module.exports = function(formidable, Groups, aws){
                 /*fs.rename(file.path, path.join(form.uploadDir, file.name), (err) => {
                     if(err)
                         throw err;
-                    
                     console.log('File renamed successfully');
                 })*/
             });

@@ -13,7 +13,7 @@ $(document).ready(function(){
         }
         
         socket.emit('join', params, function(){
-            console.log('User has joined this channel');
+            //console.log('User has joined this channel');
         });
         
     });

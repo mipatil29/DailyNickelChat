@@ -4,7 +4,7 @@ module.exports = function(io, Users){
     
     io.on('connection', (socket) => {
         
-        console.log('User Connected');
+        //console.log('User Connected');
         
         socket.on('join', (params, callback) => {
             socket.join(params.room);
@@ -15,7 +15,6 @@ module.exports = function(io, Users){
             
             callback();
         });
-        
         
         socket.on('createMessage', (message, callback) => {
             //console.log(message);

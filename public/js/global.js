@@ -44,6 +44,7 @@ $(document).ready(function(){
         $('#numOfFriends').text('('+arr.length+')');
         $('.onlineFriends').html(ol);
     });
+    
 });
 
 

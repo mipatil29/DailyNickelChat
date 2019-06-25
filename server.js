@@ -13,8 +13,6 @@ const mysql = require('mysql');
 const socketIO = require('socket.io');
 const {Users} = require('./helpers/UsersClass');
 const {Global} = require('./helpers/Global');
-
-
 const container = require('./container');
 
 container.resolve(function(users, _, admin, home, group, results, privatechat){
